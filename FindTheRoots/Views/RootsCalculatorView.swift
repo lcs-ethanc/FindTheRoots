@@ -19,6 +19,18 @@ struct RootsCalculatorView: View {
         return (-b-sqrt(b*b-4*a*c))/(2*a)
         
     }
+    var result: String{
+        let discriminant = b*b - 4*a*c
+        
+        if discriminant < 0{
+            return "No real roots"
+            
+        } else {
+            let x1 = (-b+sqrt(discriminant))/(2*a)
+            let x2 = (-b-sqrt(discriminant))/(2*a)
+            return "x = \(String(format: "%.1f", x1))and x = \(String(format: "%.1f", x2))"
+        }
+    }
 
     var body: some View {
         VStack {
@@ -55,12 +67,11 @@ struct RootsCalculatorView: View {
                 }
             } .padding(.top,10)
             HStack{
-                Text("x = \(firstx) and")
+                Text("x ≈ \(firstx) and x ≈ \(secondx)")
                     .foregroundColor(.white)
-                    .font(.system(size:20))
-                Text("x = \(secondx)")
-                    .foregroundColor(.white)
-                    .font(.system(size:20))
+                    .font(Font.custom("Times New Roman",
+                                       size: 24.0,
+                                       relativeTo: .body))
             }
             Spacer()
         }
