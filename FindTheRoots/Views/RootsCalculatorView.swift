@@ -22,7 +22,7 @@ struct RootsCalculatorView: View {
         } else {
             let x1 = (-b+sqrt(discriminant))/(2*a)
             let x2 = (-b-sqrt(discriminant))/(2*a)
-            return "x = \(String(format: "%.1f", x1)) and x = \(String(format: "%.1f", x2))"
+            return "x = \(x1.formatted(.number.precision(.fractionLength(1)))) and x = \(x2.formatted(.number.precision(.fractionLength(1))))"
         }
     }
 
@@ -43,19 +43,19 @@ struct RootsCalculatorView: View {
                 .frame(width: 250, height: 80)
             HStack{
                 VStack{
-                    Text("a = \(String(format: "%.1f", a))")
+                    Text("a = \(a.formatted(.number.precision(.fractionLength((1)))))")
                         .foregroundColor(.white)
                     Slider(value: $a, in: -10...10,step:1)
                     
                 }
                 VStack{
-                    Text("b = \(String(format: "%.1f", b))")
+                    Text("b = \(b.formatted(.number.precision(.fractionLength((1)))))")
                         .foregroundColor(.white)
                     Slider(value: $b, in: -10...10,step:1)
                     
                 }
                 VStack{
-                    Text("c = \(String(format: "%.1f", c))")
+                    Text("c = \(c.formatted(.number.precision(.fractionLength((1)))))")
                         .foregroundColor(.white)
                     Slider(value: $c, in: -10...10, step: 1)
                 }
