@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RootsCalculatorView: View {
     @State var a: Double = 0
+    @State var b: Double = 0
+    @State var c: Double = 0
     var body: some View {
         VStack {
             HStack {
@@ -23,11 +25,20 @@ struct RootsCalculatorView: View {
             Image("QuadraticEquation")
                 .resizable()
                 .frame(width: 250, height: 80)
-            VStack{
-                Slider(value: $a, in: 1...100)
-                Text("a = \(a)")
+            HStack{
+                VStack{
+                    Slider(value: $a, in: 1...100)
+                    Text("a = \(a)")
+                }
+                VStack{
+                    Slider(value: $b, in: 1...100)
+                    Text("b = \(b)")
+                }
+                VStack{
+                    Slider(value: $c, in: 1...100)
+                    Text("c = \(c)")
+                }
             }
-            
             Spacer()
         }
         .padding()
