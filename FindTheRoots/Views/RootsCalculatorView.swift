@@ -10,13 +10,18 @@ import SwiftUI
 struct RootsCalculatorView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Find the Roots")
+                .font(.system(size:40))
+            Image("QuadraticFormula")
+                .resizable()
+                .frame(width: 300, height: 100)
+            Image("QuadraticEquation")
+            
+            
         }
         .padding()
     }
+        
 }
 
 #Preview {
