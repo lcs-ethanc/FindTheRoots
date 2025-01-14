@@ -37,26 +37,31 @@ struct RootsCalculatorView: View {
                 .frame(width: 250, height: 80)
             HStack{
                 VStack{
-                    Text("a = \(a)")
+                    Text("a = \(String(format: "%.1f", a))")
                         .foregroundColor(.white)
-                    Slider(value: $a, in: 1...100)
+                    Slider(value: $a, in: -10...10,step:1)
                     
                 }
                 VStack{
-                    Text("b = \(b)")
+                    Text("b = \(String(format: "%.1f", b))")
                         .foregroundColor(.white)
-                    Slider(value: $b, in: 1...100)
+                    Slider(value: $b, in: -10...10,step:1)
                     
                 }
                 VStack{
-                    Text("c = \(c)")
+                    Text("c = \(String(format: "%.1f", c))")
                         .foregroundColor(.white)
-                    Slider(value: $c, in: 1...100)
+                    Slider(value: $c, in: -10...10, step: 1)
                 }
             } .padding(.top,10)
-            
-            Text("x = \(firstx)")
-                .foregroundColor(.white)
+            HStack{
+                Text("x = \(firstx) and")
+                    .foregroundColor(.white)
+                    .font(.system(size:20))
+                Text("x = \(secondx)")
+                    .foregroundColor(.white)
+                    .font(.system(size:20))
+            }
             Spacer()
         }
         .padding()
