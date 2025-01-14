@@ -11,6 +11,15 @@ struct RootsCalculatorView: View {
     @State var a: Double = 0
     @State var b: Double = 0
     @State var c: Double = 0
+    var firstx: Double{
+        return (-b+sqrt(b*b-4*a*c))/(2*a)
+        
+    }
+    var secondx: Double{
+        return (-b-sqrt(b*b-4*a*c))/(2*a)
+        
+    }
+
     var body: some View {
         VStack {
             HStack {
@@ -45,6 +54,9 @@ struct RootsCalculatorView: View {
                     Slider(value: $c, in: 1...100)
                 }
             } .padding(.top,10)
+            
+            Text("x = \(firstx)")
+                .foregroundColor(.white)
             Spacer()
         }
         .padding()
