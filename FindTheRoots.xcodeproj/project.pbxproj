@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		443977522D36D36500652439 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977512D36D36500652439 /* Result.swift */; };
+		443977542D36D42900652439 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977532D36D42900652439 /* ResultView.swift */; };
 		445B888C2D36C4640068D470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445B88862D36C4640068D470 /* Preview Assets.xcassets */; };
 		445B888D2D36C4640068D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445B88882D36C4640068D470 /* Assets.xcassets */; };
 		445B888E2D36C4640068D470 /* RootsCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445B88892D36C4640068D470 /* RootsCalculatorView.swift */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		443977512D36D36500652439 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		443977532D36D42900652439 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		445B88752D36C41F0068D470 /* FindTheRoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheRoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		445B88862D36C4640068D470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		445B88882D36C4640068D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				445B88892D36C4640068D470 /* RootsCalculatorView.swift */,
+				443977532D36D42900652439 /* ResultView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				443977522D36D36500652439 /* Result.swift in Sources */,
+				443977542D36D42900652439 /* ResultView.swift in Sources */,
 				445B888E2D36C4640068D470 /* RootsCalculatorView.swift in Sources */,
 				445B888F2D36C4640068D470 /* FindTheRootsApp.swift in Sources */,
 			);
