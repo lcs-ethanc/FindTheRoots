@@ -8,18 +8,12 @@
 import SwiftUI
 
 struct RootsCalculatorView: View {
+    //MARK: Stored Properties
     @State var a: Double = 0
     @State var b: Double = 0
     @State var c: Double = 0
-    var firstx: Double{
-        return (-b+sqrt(b*b-4*a*c))/(2*a)
-        
-    }
-    var secondx: Double{
-        return (-b-sqrt(b*b-4*a*c))/(2*a)
-        
-    }
-    var result: String{
+    //MARK: Computed Properties
+        var result: String{
         let discriminant = b*b - 4*a*c
         
         if discriminant < 0{
@@ -28,7 +22,7 @@ struct RootsCalculatorView: View {
         } else {
             let x1 = (-b+sqrt(discriminant))/(2*a)
             let x2 = (-b-sqrt(discriminant))/(2*a)
-            return "x = \(String(format: "%.1f", x1))and x = \(String(format: "%.1f", x2))"
+            return "x = \(String(format: "%.1f", x1)) and x = \(String(format: "%.1f", x2))"
         }
     }
 
@@ -67,7 +61,7 @@ struct RootsCalculatorView: View {
                 }
             } .padding(.top,10)
             HStack{
-                Text("x ≈ \(firstx) and x ≈ \(secondx)")
+                Text("\(result)")
                     .foregroundColor(.white)
                     .font(Font.custom("Times New Roman",
                                        size: 24.0,
