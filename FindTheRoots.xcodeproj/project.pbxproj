@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443977522D36D36500652439 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443977512D36D36500652439 /* Result.swift */; };
 		445B888C2D36C4640068D470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445B88862D36C4640068D470 /* Preview Assets.xcassets */; };
 		445B888D2D36C4640068D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 445B88882D36C4640068D470 /* Assets.xcassets */; };
 		445B888E2D36C4640068D470 /* RootsCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445B88892D36C4640068D470 /* RootsCalculatorView.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		443977512D36D36500652439 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		445B88752D36C41F0068D470 /* FindTheRoots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheRoots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		445B88862D36C4640068D470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		445B88882D36C4640068D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		443977502D36D33600652439 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				443977512D36D36500652439 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		445B886C2D36C41F0068D470 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				445B888A2D36C4640068D470 /* FindTheRootsApp.swift */,
+				443977502D36D33600652439 /* Model */,
 				445B88902D36C49B0068D470 /* Views */,
 				445B88872D36C4640068D470 /* Preview Content */,
 				445B88882D36C4640068D470 /* Assets.xcassets */,
@@ -148,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				443977522D36D36500652439 /* Result.swift in Sources */,
 				445B888E2D36C4640068D470 /* RootsCalculatorView.swift in Sources */,
 				445B888F2D36C4640068D470 /* FindTheRootsApp.swift in Sources */,
 			);
