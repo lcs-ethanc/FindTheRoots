@@ -17,6 +17,7 @@ struct RootsCalculatorView: View {
                
                 Text("Find the Roots")
                     .font(.system(size:40))
+                    .foregroundColor(.white)
                 Spacer ()
             }
             Image("QuadraticFormula")
@@ -27,21 +28,27 @@ struct RootsCalculatorView: View {
                 .frame(width: 250, height: 80)
             HStack{
                 VStack{
-                    Slider(value: $a, in: 1...100)
                     Text("a = \(a)")
+                        .foregroundColor(.white)
+                    Slider(value: $a, in: 1...100)
+                    
                 }
                 VStack{
-                    Slider(value: $b, in: 1...100)
                     Text("b = \(b)")
+                        .foregroundColor(.white)
+                    Slider(value: $b, in: 1...100)
+                    
                 }
                 VStack{
-                    Slider(value: $c, in: 1...100)
                     Text("c = \(c)")
+                        .foregroundColor(.white)
+                    Slider(value: $c, in: 1...100)
                 }
-            }
+            } .padding(.top,10)
             Spacer()
         }
         .padding()
+        .background(.black)
     }
         
 }
