@@ -10,7 +10,16 @@ import SwiftUI
 struct ResultView: View {
     let somePriorResult: Result
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing:10){
+            HStack(spacing:30){
+                Text("a: \(somePriorResult.a.formatted(.number.precision(.fractionLength(1))))")
+                Text("b: \(somePriorResult.b.formatted(.number.precision(.fractionLength(1))))")
+                Text("c: \(somePriorResult.c.formatted(.number.precision(.fractionLength(1))))")
+            }
+            
+            Text(somePriorResult.roots)
+                .font(Font.custom("Times New Roman", size: 20.0, relativeTo: .body))
+        }
     }
 }
 
