@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct RootsCalculatorView: View {
+    
     //MARK: Stored Properties
+    
+    //Coefficient inputs
     @State var a: Double = 0
     @State var b: Double = 0
     @State var c: Double = 0
+    
+    // List of prior results
+    @State var priorResults: [Result] = []
+    
     //MARK: Computed Properties
+    //Discriminant =
+    //1. Negative = 2 complex roots
+    //2. 0 = 2 identical roots
+    //3. Positive = 2 real roots
         var result: String{
         let discriminant = b*b - 4*a*c
         
@@ -60,13 +71,26 @@ struct RootsCalculatorView: View {
                     Slider(value: $c, in: -10...10, step: 1)
                 }
             } .padding(.top,10)
-            HStack{
+            
+            //Output
                 Text("\(result)")
                     .foregroundColor(.white)
                     .font(Font.custom("Times New Roman",
                                        size: 24.0,
                                        relativeTo: .body))
-            }
+             Button(action: {
+                 //copy a,b,c,roots into Result structure
+                 let latestResult = Result(a: a, b: b, c: b, roots: result)
+                 //add to empty list called priorResults
+                 priorResults.append(latestResult)
+                 
+                 
+             },label:{
+                 Text("Save Result")
+             })
+             .buttonStyle(.bordered)
+             .padding()
+        
             Spacer()
         }
         .padding()
