@@ -78,6 +78,7 @@ struct RootsCalculatorView: View {
                     .font(Font.custom("Times New Roman",
                                        size: 24.0,
                                        relativeTo: .body))
+            //Button
              Button(action: {
                  //copy a,b,c,roots into Result structure
                  let latestResult = Result(a: a, b: b, c: b, roots: result)
@@ -91,6 +92,26 @@ struct RootsCalculatorView: View {
              .buttonStyle(.bordered)
              .padding()
         
+            //History Label
+            HStack{
+                Text("History")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            //History List (.reversed to show in reversed order)
+            List(priorResults.reversed()) { currentResult in
+                HStack{
+                    
+                    Spacer()
+                    ResultView(somePriorResult: currentResult)
+                    Spacer()
+                }
+  
+            }
+            //hides the background of the scrollable list
+            .scrollContentBackground(.hidden)
             Spacer()
         }
         .padding()
